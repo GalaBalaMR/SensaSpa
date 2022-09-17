@@ -23,6 +23,7 @@
         {{-- Main CSS --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/my.css') }}">
         <!-- Scripts -->
 
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -30,7 +31,7 @@
     <body class="font-sans antialiased bg-light">
         <!-- ======= Header ======= -->
         <header id="header" class="header d-flex align-items-center">
-            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between" id="head-nav">
 
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -42,38 +43,41 @@
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
             <nav id="navbar" class="navbar">
                 <ul>
-                    @if( Route::current()->getName() == 'admin.projects.index' || 
-                         Route::current()->getName() == 'admin.projects.edit' || 
-                         Route::current()->getName() == 'admin.projects.create' || 
-                         Route::current()->getName() == 'admin.projects.index' || 
-                         Route::current()->getName() == 'login' || 
-                         Route::current()->getName() == 'register')
-                        <li><a href="/" class="active">Home</a></li>
-                        <li><a href="#about">O mne</a></li>
-                        <li><a href="#alt-services">Moje služby</a></li>
-                        <li><a href="#projects">Projekty</a></li>
-                        @If(Auth::check() && Auth::user()->is_admin)
-                            <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                <ul>
-                                <li><a href="{{ route('admin.index') }}">Admin Panel</a></li>
-                                </ul>
-                            </li>
-                        @endif
-                        <li><a href="#contact">Kontakt</a></li>
+                @if( Route::current()->getName() == 'admin.projects.index' || 
+                        Route::current()->getName() == 'admin.projects.edit' || 
+                        Route::current()->getName() == 'admin.projects.create' || 
+                        Route::current()->getName() == 'admin.projects.index' || 
+                        Route::current()->getName() == 'login' || 
+                        Route::current()->getName() == 'register')
+                    <li><a href="/" class="active">Domov</a></li>
+                    <li><a href="#about">O mne</a></li>
+                    <li><a href="#alt-services">Moje služby</a></li>
+                    <li><a href="#projects">Projekty</a></li>
+                    @If(Auth::check() && Auth::user()->is_admin)
+                    <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="{{ route('admin.index') }}">Admin Panel</a></li>
+                            <li><a href="{{ route('admin.projects.index') }}">Projekty</a></li>
+                        </ul>
+                    </li>
+                    @endif
+                    <li><a href="#contact">Kontakt</a></li>
                     @else
-                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/" class="active">Domov</a></li>
                     <li><a href="#about">O mne</a></li>
                     <li><a href="#alt-services">Moje služby</a></li>
                     <li><a href="#projects">Projekty</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                     @If(Auth::check() && Auth::user()->is_admin)
-                        <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
+                    <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
                             <li><a href="{{ route('admin.index') }}">Admin Panel</a></li>
-                            </ul>
-                        </li>
+                            <li><a href="{{ route('admin.projects.index') }}">Projekty</a></li>
+                        </ul>
+                    </li>
                     @endif
-                @endif
+                    @endif
+                </ul>
             </nav><!-- .navbar -->
 
             </div>
@@ -248,6 +252,6 @@
         <script src="{{ asset('js/jquery.js') }}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
         {{-- <script src="{{ asset('Trumbowyg/dist/trumbowyg.min.js') }}" defer></script> --}}
-        {{-- <script src="{{ asset('js/my.js') }}" defer></script> --}}
+        <script src="{{ asset('js/script.js') }}" defer></script>
     </body>
 </html>
