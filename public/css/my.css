@@ -1,0 +1,8 @@
+.fixed {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    background-color: #000000a6;
+    transition: 0.8s;
+}
