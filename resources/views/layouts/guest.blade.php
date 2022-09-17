@@ -235,6 +235,8 @@
 
         <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+        @include('cookieConsent::index')
+
         <div id="preloader"></div>
         <!-- Vendor JS Files -->
         <script src="{{ asset('theme_vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
