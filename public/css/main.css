@@ -2626,13 +2626,15 @@ section {
   font-size: 14px;
   padding: 80px 0 60px 0;
   position: relative;
+  background-size: 100% 100%;
 }
 
 .footer:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   inset: 0;
+  
 }
 
 .footer .footer-content .footer-info {
