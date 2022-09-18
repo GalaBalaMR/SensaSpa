@@ -60,26 +60,20 @@
       
               <ul class="nav nav-tabs row  g-2 d-flex">
       
-                <li class="nav-item col-3">
+                <li class="nav-item col-4">
                   <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
                     <h4>Kuchyne</h4>
                   </a>
                 </li><!-- End tab nav item -->
       
-                <li class="nav-item col-3">
+                <li class="nav-item col-4">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                     <h4>Vstavané skrine</h4>
                   </a><!-- End tab nav item -->
       
-                <li class="nav-item col-3">
+                <li class="nav-item col-4">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
                     <h4>Nábytky</h4>
-                  </a>
-                </li><!-- End tab nav item -->
-      
-                <li class="nav-item col-3">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                    <h4>Rôzne stolárske prace</h4>
                   </a>
                 </li><!-- End tab nav item -->
       
@@ -144,26 +138,6 @@
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
                       <img src="{{ Storage::url('public/theme_img/features-3.jpg') }}" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                </div><!-- End tab content item -->
-      
-                <div class="tab-pane" id="tab-4">
-                  <div class="row">
-                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                      <h3>Ostatné stolarske roboty</h3>
-                      <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </p>
-                      <ul>
-                        <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                        <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 text-center">
-                      <img src="{{ Storage::url('public/theme_img/features-4.jpg') }}" alt="" class="img-fluid">
                     </div>
                   </div>
                 </div><!-- End tab content item -->
