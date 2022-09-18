@@ -100,7 +100,7 @@
 
             <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-            <div class="carousel-item active w-100" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }})"></div>
+            <div class="carousel-item active" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }})"></div>
             <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-2.jpg') }})"></div>
             <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-3.jpg') }})"></div>
             <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-4.jpg') }})"></div>
