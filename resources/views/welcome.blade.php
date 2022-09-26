@@ -52,6 +52,88 @@
             </div>
     
           </div>
+          <!-- ======= Services Section ======= -->
+        <div id="services" class="services section-bg">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-header">
+              <h2>Pravidlá prístupu</h2>
+              <p>Pri mojom podnikaní sa snažím dodržiavať tieto veci.</p>
+            </div>
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item  position-relative">
+                  <div class="icon">
+                    <i class="fa-regular fa-handshake"></i>
+                  </div>
+                  <h3>Spoľahlivosť</h3>
+                  <p>Som spoľahlivý a roduverný občan</p>
+                  
+                </div>
+              </div><!-- End Service Item -->
+    
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item position-relative">
+                  <div class="icon">
+                    <i class="fa fa-wrench ms-1"></i>
+                  </div>
+                  <h3>Oprava</h3>
+                  <p>Opravím všetko a rozbijem vás vy špiny</p>
+                  
+                </div>
+              </div><!-- End Service Item -->
+    
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item position-relative">
+                  <div class="icon">
+                    <i class="fa-solid fa-compass-drafting ms-1"></i>
+                  </div>
+                  <h3>Zameranie</h3>
+                  <p>Prídem osobne a všetko presne zameriam</p>
+                  
+                </div>
+              </div><!-- End Service Item -->
+    
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-item position-relative">
+                  <div class="icon">
+                    <i class="fa-truck fas"></i>
+                  </div>
+                  <h3>Doprava</h3>
+                  <p>Všetko donesiem a odnesiem, prenesiem a nanesiem</p>
+                  
+                </div>
+              </div><!-- End Service Item -->
+    
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-item position-relative">
+                  <div class="icon">
+                    <i class="fa-solid fa-sack-dollar ms-1"></i>
+                  </div>
+                  <h3>Najlepšia cena</h3>
+                  <p>Sme malá firma a všetko si spravujeme samostatne</p>
+                  
+                </div>
+              </div><!-- End Service Item -->
+    
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-item position-relative">
+                  <div class="icon">
+                     <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+                  </div>
+                  <h3>Dolori Architecto</h3>
+                  <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+                  <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div><!-- End Service Item -->
+    
+            </div>
+    
+          </div>
+        </div><!-- End Services Section -->
+          
         </section><!-- End Get Started Section -->
 
         <!-- ======= Features Section ======= -->
@@ -147,90 +229,9 @@
             </div>
           </section><!-- End Features Section -->
     
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services section-bg">
-          <div class="container" data-aos="fade-up">
-    
-            <div class="section-header">
-              <h2>Pravidlá prístupu</h2>
-              <p>Pri mojom podnikaní sa snažím dodržiavať tieto veci.</p>
-            </div>
-    
-            <div class="row gy-4">
-    
-              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-item  position-relative">
-                  <div class="icon">
-                    <i class="fa-regular fa-handshake"></i>
-                  </div>
-                  <h3>Spoľahlivosť</h3>
-                  <p>Som spoľahlivý a roduverný občan</p>
-                  
-                </div>
-              </div><!-- End Service Item -->
-    
-              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-item position-relative">
-                  <div class="icon">
-                    <i class="fa fa-wrench ms-1"></i>
-                  </div>
-                  <h3>Oprava</h3>
-                  <p>Opravím všetko a rozbijem vás vy špiny</p>
-                  
-                </div>
-              </div><!-- End Service Item -->
-    
-              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-item position-relative">
-                  <div class="icon">
-                    <i class="fa-solid fa-compass-drafting ms-1"></i>
-                  </div>
-                  <h3>Zameranie</h3>
-                  <p>Prídem osobne a všetko presne zameriam</p>
-                  
-                </div>
-              </div><!-- End Service Item -->
-    
-              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-item position-relative">
-                  <div class="icon">
-                    <i class="fa-truck fas"></i>
-                  </div>
-                  <h3>Doprava</h3>
-                  <p>Všetko donesiem a odnesiem, prenesiem a nanesiem</p>
-                  
-                </div>
-              </div><!-- End Service Item -->
-    
-              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-item position-relative">
-                  <div class="icon">
-                    <i class="fa-solid fa-sack-dollar ms-1"></i>
-                  </div>
-                  <h3>Najlepšia cena</h3>
-                  <p>Sme malá firma a všetko si spravujeme samostatne</p>
-                  
-                </div>
-              </div><!-- End Service Item -->
-    
-              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="service-item position-relative">
-                  <div class="icon">
-                     <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-                  </div>
-                  <h3>Dolori Architecto</h3>
-                  <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-                  <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div><!-- End Service Item -->
-    
-            </div>
-    
-          </div>
-        </section><!-- End Services Section -->
-    
+        
         <!-- ======= Alt Services Section ======= -->
-        <section id="alt-services" class="alt-services">
+        {{-- <section id="alt-services" class="alt-services">
           <div class="container" data-aos="fade-up">
     
             <div class="row justify-content-around gy-4">
@@ -276,7 +277,7 @@
             </div>
     
           </div>
-        </section><!-- End Alt Services Section -->
+        </section><!-- End Alt Services Section --> --}}
     
         <!-- ======= Constructions Section ======= -->
         <section id="constructions" class="constructions">
