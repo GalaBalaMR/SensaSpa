@@ -44,15 +44,17 @@
             <nav id="navbar" class="navbar">
                 <ul>
                 @if( Route::current()->getName() == 'admin.projects.index' || 
-                        Route::current()->getName() == 'admin.projects.edit' || 
+                        Route::current()->getName() == 'admin.projects.edit' ||
+                        request()->segment(count(request()->segments())) == 'admin' || 
                         Route::current()->getName() == 'admin.projects.create' || 
                         Route::current()->getName() == 'admin.projects.index' || 
                         Route::current()->getName() == 'login' || 
                         Route::current()->getName() == 'register')
-                    <li><a href="/" class="active">Domov</a></li>
-                    <li><a href="#about">O mne</a></li>
-                    <li><a href="#alt-services">Moje služby</a></li>
-                    <li><a href="#projects">Projekty</a></li>
+                    <li><a href="/#hero" class="active">Domov</a></li>
+                    <li><a href="/#about">O mne</a></li>
+                    <li><a href="/#features">Moje služby</a></li>
+                    <li><a href="/#projects">Projekty</a></li>
+
                     @If(Auth::check() && Auth::user()->is_admin)
                     <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
@@ -61,11 +63,13 @@
                         </ul>
                     </li>
                     @endif
-                    <li><a href="#contact">Kontakt</a></li>
+                    
+                    <li><a href="/#contact">Kontakt</a></li>
+
                     @else
-                    <li><a href="/" class="active">Domov</a></li>
+                    <li><a href="/#hero" class="active">Domov</a></li>
                     <li><a href="#about">O mne</a></li>
-                    <li><a href="#alt-services">Moje služby</a></li>
+                    <li><a href="#features">Moje služby</a></li>
                     <li><a href="#projects">Projekty</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                     @If(Auth::check() && Auth::user()->is_admin)
@@ -217,14 +221,10 @@
             <div class="footer-legal text-center position-relative">
             <div class="container">
                 <div class="copyright">
-                &copy; Copyright <strong><span>UpConstruction</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>GalaBala</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="https://github.com/GalaBalaMR?tab=repositories">GalaBala</a>
                 </div>
             </div>
             </div>
