@@ -37,4 +37,19 @@ $( document ).ready(function() {
       });
   });
 
+  //hide and show content form
+  var $content_form_div = $('.content-form-div');
+      $content_form_a = $('.content-form-a');
+
+  $content_form_div.hide();
+
+  $content_form_a.each(function(){
+  $(this).on('click', function(event){
+    event.preventDefault();
+    $(this).next().slideToggle(1000);
+  })
+  })
+
+  $('.content-textarea').trumbowyg();
+
 });
