@@ -1,9 +1,12 @@
 <?php
 
+use App\Models\Content;
 use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,17 +21,21 @@ use App\Http\Controllers\ProjectController;
 
 Route::get('/', function () {
     $projects = Project::all();
-    return view('welcome', compact('projects'));
+    $contents = Content::all();
+    return view('welcome', compact('projects', 'contents'));
 });
 
 Route::middleware('isAdmin')->name('admin.')->prefix('admin')->group(function() {
     Route::get('/' , [AdminController::class, 'index'])->name('index');
     Route::resource('/projects' , ProjectController::class);
-
+    Route::resource('/contents', ContentController::class);
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::any('/register', function() {
+    return  view('auth.login');
+});
 require __DIR__.'/auth.php';
