@@ -6,3 +6,12 @@
     background-color: #000000a6;
     transition: 0.8s;
 }
+
+.portfolio-item{
+    border: 1px solid #feb900;
+}
+
+.projects .carousel-item p, h5{
+    background-color: #feb900;
+    color: #f3f4f6;
+}
