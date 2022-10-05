@@ -19,6 +19,7 @@
         <link href="{{  asset('theme_vendor/aos/aos.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+        <link href="{{  asset('Trumbowyg/dist/ui/trumbowyg.min.css') }}" rel="stylesheet">
         
         {{-- Main CSS --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -33,10 +34,10 @@
         <header id="header" class="header d-flex align-items-center">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between" id="head-nav">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>UpConstruction<span>.</span></h1>
+                <h1>Woo<span>dD</span>ream</h1>
             </a>
 
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -60,6 +61,14 @@
                         <ul>
                             <li><a href="{{ route('admin.index') }}">Admin Panel</a></li>
                             <li><a href="{{ route('admin.projects.index') }}">Projekty</a></li>
+                            <li>
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <button type="submit" class="btn"></button>
+                                </form>
+                            </li>
                         </ul>
                     </li>
                     @endif
@@ -77,6 +86,18 @@
                         <ul>
                             <li><a href="{{ route('admin.index') }}">Admin Panel</a></li>
                             <li><a href="{{ route('admin.projects.index') }}">Projekty</a></li>
+                            <li>
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-dropdown-link :href="route('logout')"
+                                                 onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                        {{ __('Odhlásiť sa') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </li>
                         </ul>
                     </li>
                     @endif
@@ -136,6 +157,7 @@
                             {{ session('status') }} 
                         </div>
         @endif
+
         @if (session()->has('info'))
             <div id="flash-message" class="alert alert-{{ session('type')}} col-8 m-auto mt-3">
                 <p>
@@ -143,79 +165,76 @@
                 </p>
             </div>
         @endif
-        {{ $slot }}
+
+        <main id="main">
+            {{ $slot }}
+        </main>
 
         <!-- ======= Footer ======= -->
         <footer id="footer" class="footer" style="background: url('{{ Storage::url('public/theme_img/footer-bg.jpg') }}') top center no-repeat;">
 
             <div class="footer-content position-relative">
-            <div class="container">
-                <div class="row">
+                <div class="container">
+                    <div class="row">
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-info">
-                    <h3>UpConstruction</h3>
-                    <p>
-                        A108 Adam Street <br>
-                        NY 535022, USA<br><br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
-                    </p>
-                    <div class="social-links d-flex mt-3">
-                        <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+                        <div class="col-12 text-center col-lg-4 col-md-6">
+                            <div class="footer-info">
+                            <h3>UpConstruction</h3>
+                            <p>
+                                A108 Adam Street <br>
+                                NY 535022, USA<br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links d-flex mt-3 d-flex justify-content-center">
+                                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                            </div>
+                        </div><!-- End footer info column-->
+
+                        <div class="col-lg-8 col-md-5 footer-links d-flex justify-content-around">
+                            <div>
+                                <h4>Menu</h4>
+                                <ul>
+                                    @if( Route::current()->getName() == 'admin.projects.index' || 
+                                            Route::current()->getName() == 'admin.projects.edit' ||
+                                            request()->segment(count(request()->segments())) == 'admin' || 
+                                            Route::current()->getName() == 'admin.projects.create' || 
+                                            Route::current()->getName() == 'admin.projects.index' || 
+                                            Route::current()->getName() == 'login' || 
+                                            Route::current()->getName() == 'register')
+                                    <li><a href="/#hero" class="active">Domov</a></li>
+                                    <li><a href="/#about">O mne</a></li>
+                                    <li><a href="/#features">Moje služby</a></li>
+                                    <li><a href="/#projects">Projekty</a></li>
+                                    <li><a href="/#contact">Kontakt</a></li>
+                
+                                    @else
+                                    <li><a href="/#hero" class="active">Domov</a></li>
+                                    <li><a href="#about">O mne</a></li>
+                                    <li><a href="#features">Moje služby</a></li>
+                                    <li><a href="#projects">Projekty</a></li>
+                                    <li><a href="#contact">Kontakt</a></li>
+                                    @endif
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Partneri</h4>
+                                <ul>
+                                    <li><a href="#">Od koho berieš drevo.</a></li>
+                                    <li><a href="#">Nejaky dodavateľ</a></li>
+                                    <li><a href="#">Alebo proste nič</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- End footer links column-->
+
+                    
+
                     </div>
-                    </div>
-                </div><!-- End footer info column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Terms of service</a></li>
-                    <li><a href="#">Privacy policy</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Product Management</a></li>
-                    <li><a href="#">Marketing</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Hic solutasetp</h4>
-                    <ul>
-                    <li><a href="#">Molestiae accusamus iure</a></li>
-                    <li><a href="#">Excepturi dignissimos</a></li>
-                    <li><a href="#">Suscipit distinctio</a></li>
-                    <li><a href="#">Dilecta</a></li>
-                    <li><a href="#">Sit quas consectetur</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Nobis illum</h4>
-                    <ul>
-                    <li><a href="#">Ipsam</a></li>
-                    <li><a href="#">Laudantium dolorum</a></li>
-                    <li><a href="#">Dinera</a></li>
-                    <li><a href="#">Trodelas</a></li>
-                    <li><a href="#">Flexo</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
                 </div>
-            </div>
             </div>
 
             <div class="footer-legal text-center position-relative">
@@ -252,7 +271,7 @@
         {{-- My JS File --}}
         <script src="{{ asset('js/jquery.js') }}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
-        {{-- <script src="{{ asset('Trumbowyg/dist/trumbowyg.min.js') }}" defer></script> --}}
+        <script src="{{ asset('Trumbowyg/dist/trumbowyg.min.js') }}" defer></script>
         <script src="{{ asset('js/script.js') }}" defer></script>
     </body>
 </html>
