@@ -115,9 +115,12 @@
             <div class="container">
                 <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <h2 data-aos="fade-down">Welcome to <span>UpConstruction</span></h2>
-                    <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+                    {!!  $contents->first()->content  !!}
+
+                    @If(Auth::check() && Auth::user()->is_admin)
+                        @include('content.partials.form', ['content' => $contents->where('name', 'hero')->first()])
+                    @endif
+                    <a data-aos="fade-up" data-aos-delay="200" href="#contaktMail" class="btn-get-started">Kontaktuj nás</a>
                 </div>
                 </div>
             </div>
@@ -253,9 +256,11 @@
 
         <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+        {{-- For laravel cookie --}}
         @include('cookieConsent::index')
 
         <div id="preloader"></div>
+        <img src="{{ Storage::url('public/loader.gif') }}" alt="loader" id="loader" class="d-none" style="width: 4rem;position: fixed; z-index: 10; left: 46%; top: 35%">
         <!-- Vendor JS Files -->
         <script src="{{ asset('theme_vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{ asset('theme_vendor/aos/aos.js')}}"></script>

@@ -4,9 +4,10 @@ use App\Models\Content;
 use App\Models\Project;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,8 @@ Route::middleware('isAdmin')->name('admin.')->prefix('admin')->group(function() 
     Route::resource('/projects' , ProjectController::class);
     Route::resource('/contents', ContentController::class);
 });
+
+Route::post('/infomail', [MailController::class, 'infomail'])->name('infomail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -17,21 +17,23 @@
       </div>
 
       <div class="col-lg-5" data-aos="fade">
-        <form action="forms/quote.php" method="post" class="php-email-form">
-          <h3>Get a quote</h3>
-          <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero park flows.</p>
+        <form action="{{ route('infomail') }}" method="post" class="php-email-form" id="contaktMail">
+          @csrf
+          @method('post')
+          <h3>Napíšte nám!</h3>
+          <p>V prípade akýchkoľvek otázok nás neváhajte kontaktovať. Môžte nám napísat na <a href="mailto:info@wooddream.sk">info@wooddream.sk</a>, alebo cez náš kontaktný formulár.</p>
           <div class="row gy-3">
 
             <div class="col-md-12">
-              <input type="text" name="name" class="form-control" placeholder="Name" required>
+              <input type="text" name="name" class="form-control" placeholder="Name" value="{{old('name')}}"required>
             </div>
 
             <div class="col-md-12 ">
-              <input type="email" class="form-control" name="email" placeholder="Email" required>
+              <input type="email" class="form-control" name="email" placeholder="Email" value="{{old('email')}}" required>
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+              <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{old('phone')}}" required>
             </div>
 
             <div class="col-md-12">
@@ -41,9 +43,9 @@
             <div class="col-md-12 text-center">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
+              <div class="sent-message">Úspešne odoslané, ďakujeme.</div>
 
-              <button type="submit">Get a quote</button>
+              <button type="submit">Odoslať</button>
             </div>
 
           </div>
@@ -326,7 +328,7 @@
         Vytvoriť projekt
       </a>
       @else 
-      <a href="#email" class="btn btn-warning rounded-pill text-light mb-3">
+      <a href="#contaktMail" class="btn btn-warning rounded-pill text-light mb-3">
         Mám záujem!
       </a>
       @endif
