@@ -5,7 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}-kuchyne, skrine, nábytok</title>
+        {{-- META DESCRIPTION --}}
+        <meta name="description" content="Som stolár, venujúci sa tvorbe kuchyne, skrine alebo nábytku na mieru podľa želania klienta">
+        {{-- META KEYWORDS --}}
+        <meta name="keywords" content="stolar, kuchyna, nabytok, skrina, na mieru, dielna">
+        {{-- META FAVICON --}}
+        <link rel="shortcut icon" type="image/ico" href="{{ Storage::url('favicon.ico') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ Storage::url('public/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ Storage::url('public/favicon-32x32.pnp') }}">
+        <link rel="icon" type="image/png"  href="{{ Storage::url('public/favicon-16x16.pnp') }}">
+        <link rel="manifest" href="{{  asset('site.webmanifest') }}">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

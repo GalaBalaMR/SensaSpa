@@ -2,8 +2,6 @@
     <x-auth-card>
 
         <div class="card-body">
-            <!-- Session Status -->
-            <x-auth-session-status class="mb-3" :status="session('status')" />
 
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-3" :errors="$errors" />
@@ -20,7 +18,7 @@
 
                 <!-- Password -->
                 <div class="mb-3">
-                    <x-label for="password" :value="__('Password')" />
+                    <x-label for="password" :value="__('Heslo')" />
 
                     <x-input id="password" type="password"
                              name="password"
@@ -33,7 +31,7 @@
                         <x-checkbox id="remember_me" name="remember" />
 
                         <label class="form-check-label" for="remember_me">
-                            {{ __('Remember Me') }}
+                            {{ __('Zapamätaj si ma') }}
                         </label>
                     </div>
                 </div>

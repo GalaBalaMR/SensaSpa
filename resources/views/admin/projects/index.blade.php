@@ -3,8 +3,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header pb-3">
-          <h2>Our Projects</h2>
-          <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>
+          <h2>Moje projekty</h2>
+          <p>Prehľad pridaných projektov.</p>
         </div>
         <div class="text-center">
           <a href="{{ route('admin.projects.create') }}" class="btn btn-warning rounded-pill text-light mb-3">
@@ -25,7 +25,7 @@
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
             @forelse($projects as $project)
-            <div class="card portfolio-item filter-{{ $project->kind }} col-lg-3 p-0" style="background: #dee2eb33;">
+            <div class="card portfolio-item filter-{{ $project->kind }} col-lg-3 p-0" id="portfolio-{{ $project->id }}" style="background: #dee2eb33;">
               <div class="card-img-top">
 
                 <div id="carousel-{{ $project->id }}" class="carousel slide" data-bs-ride="false">
@@ -87,10 +87,11 @@
 
                     <form action="{{ route('admin.projects.destroy', $project->id) }}"
                       method="POST"
-                      onsubmit="return confirm('Určite chceš vymazať?')">
+                      {{-- onsubmit="return confirm('Určite chceš vymazať?')" --}}
+                      class="delProject">
                       @csrf
                       @method('DELETE')
-                      <button type="submit" class="btn link-danger fw-bold">zahodiť</button>
+                      <button type="submit" class="btn link-danger fw-bold" >zahodiť</button>
                     </form>
 
                   </div>

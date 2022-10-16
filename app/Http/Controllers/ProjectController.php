@@ -139,7 +139,8 @@ class ProjectController extends Controller
         if($request->ajax())
         {
             return response()->json(['flash' => 'Project bol vymazaný' ,
-                                     'status'=> 'danger'
+                                     'status'=> '1',
+                                     'id' => $project->id
                                     ]);
         }
 

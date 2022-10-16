@@ -77,14 +77,6 @@ $( document ).ready(function() {
         
       },
       success: function(data){
-        
-        var $changing_div = $('.'+ data.name +'');
-
-        $changing_div.slideUp(400, function() {
-          // Animation complete.
-          $changing_div.empty().append( data.content );
-        });
-        $changing_div.slideDown(500);
         //add value, delay and hide on ALERT
         //prepend it on info-mail 
 
@@ -101,5 +93,45 @@ $( document ).ready(function() {
       }
     })
   })
+
+  // Ajax for delete project
+
+  var delProject = $('.delProject');
+
+  delProject.each(function(){
+    
+    $(this).on('submit', function(e){
+      e.preventDefault();
+      var $this_form = $(this);
+      $.ajax({
+        url:  $(this).attr('action'),
+        method: 'POST',
+        data: $(this).serialize(),
+        beforeSend: function(){
+          $loader.removeClass('d-none');
+        },
+        complete: function(){
+          $loader.addClass('d-none');
+          
+        },
+        success: function(data){
+          //add value, delay and hide on ALERT
+          //prepend it on info-mail 
+
+          $alert_p.text(data.flash);
+          $alert.prependTo('.portfolio-isotope').hide().slideDown(500);
+          if(data.status == '1'){
+            $alert.addClass('alert-success');
+            $('#portfolio-'+ data.id).hide(1500);
+          }else{
+            $alert.addClass('alert-danger');
+          }
+          $alert.show();
+          $alert.delay(3000).hide(2000);
+
+        }
+      })
+    })
+  });
 
 });
