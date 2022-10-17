@@ -55,43 +55,56 @@ $( document ).ready(function() {
   // Ajax for mail
   
   var ajaxMailForm = $('#contaktMail');
+      checkAgreement = $('#CheckAgreement');
       $alert = $('<div class="alert"></div>');
       $alert_p = $('<p></p>');
-      $loader  = $('#loader')
+      $loader  = $('#loader');
 
   $alert_p.appendTo($alert);
 
   ajaxMailForm.on('submit', function(e){
     e.preventDefault();
-
+    
     var $this_form = $(this);
-    $.ajax({
-      url:  $(this).attr('action'),
-      method: 'POST',
-      data: $(this).serialize(),
-      beforeSend: function(){
-        $loader.removeClass('d-none');
-      },
-      complete: function(){
-        $loader.addClass('d-none');
-        
-      },
-      success: function(data){
-        //add value, delay and hide on ALERT
-        //prepend it on info-mail 
 
-        $alert_p.text(data.flash);
-        $alert.prependTo($this_form).hide().slideDown(500);
-        if(data.success == '1'){
-          $alert.addClass('alert-success');
-        }else{
-          $alert.addClass('alert-danger');
+    if (checkAgreement.is(':checked')){
+      $.ajax({
+        url:  $(this).attr('action'),
+        method: 'POST',
+        data: $(this).serialize(),
+        beforeSend: function(){
+          $loader.removeClass('d-none');
+        },
+        complete: function(){
+          $loader.addClass('d-none');
+          
+        },
+        success: function(data){
+          //add value, delay and hide on ALERT
+          //prepend it on info-mail 
+  
+          $alert_p.text(data.flash);
+          $alert.insertAfter(checkAgreement.parent()).hide().slideDown(500);
+          if(data.success == '1'){
+            $alert.addClass('alert-success');
+          }else{
+            $alert.addClass('alert-danger');
+          }
+          $alert.show();
+          $alert.delay(3000).hide(2000);
+          $this_form.trigger("reset");
+  
         }
-        $alert.show();
-        $alert.delay(3000).hide(2000);
+      })
+    }else{
 
-      }
-    })
+      $alert_p.text('Na odoslanie emailu potvrďte, že súhlasíte so spracovaním osobných údajov.');
+      $alert.insertAfter(checkAgreement.parent()).hide().slideDown(500);
+      $alert.addClass('alert-danger');
+      $alert.show();
+      $alert.delay(3000).hide(2000);
+    }
+
   })
 
   // Ajax for delete project

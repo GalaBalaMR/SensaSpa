@@ -22,7 +22,7 @@ class MailController extends Controller
         {
             return response()->json(['flash' => 'Podarilo sa odoslať email.',
                                      'name'  => $request->name ,
-                                     'status'=> 'succes',
+                                     'status'=> 'success',
                                      'success' => 1,
                                     ]);
         }

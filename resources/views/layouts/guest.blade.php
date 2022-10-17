@@ -13,8 +13,8 @@
         {{-- META FAVICON --}}
         <link rel="shortcut icon" type="image/ico" href="{{ Storage::url('favicon.ico') }}">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ Storage::url('public/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ Storage::url('public/favicon-32x32.pnp') }}">
-        <link rel="icon" type="image/png"  href="{{ Storage::url('public/favicon-16x16.pnp') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ Storage::url('public/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png"  href="{{ Storage::url('public/favicon-16x16.png') }}">
         <link rel="manifest" href="{{  asset('site.webmanifest') }}">
 
         <!-- Google Fonts -->
@@ -138,10 +138,18 @@
 
             <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-            <div class="carousel-item active" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }})"></div>
-            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-2.jpg') }})"></div>
-            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-3.jpg') }})"></div>
-            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-4.jpg') }})"></div>
+            <div class="carousel-item active" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }})">
+                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            </div>
+            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-2.jpg') }})">
+                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-2.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            </div>
+            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-3.jpg') }})">
+                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-3.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            </div>
+            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-4.jpg') }})">
+                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-4.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            </div>
 
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -231,6 +239,7 @@
                                     <li><a href="#features">Moje služby</a></li>
                                     <li><a href="#projects">Projekty</a></li>
                                     <li><a href="#contact">Kontakt</a></li>
+                                    <li><a href="{{ route('ochrana-osobnych-udajov') }}">Ochrana osobných údajov</a></li>
                                     @endif
                                 </ul>
                             </div>

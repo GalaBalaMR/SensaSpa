@@ -17,7 +17,7 @@
       </div>
 
       <div class="col-lg-5" data-aos="fade">
-        <form action="{{ route('infomail') }}" method="post" class="php-email-form" id="contaktMail">
+        <form action="{{ route('infomail') }}" method="post" class="p" id="contaktMail">
           @csrf
           @method('post')
           <h3>Napíšte nám!</h3>
@@ -25,27 +25,30 @@
           <div class="row gy-3">
 
             <div class="col-md-12">
-              <input type="text" name="name" class="form-control" placeholder="Name" value="{{old('name')}}"required>
+              <input type="text" name="name" class="form-control mail-input" placeholder="Name" value="{{old('name')}}"required>
             </div>
 
             <div class="col-md-12 ">
-              <input type="email" class="form-control" name="email" placeholder="Email" value="{{old('email')}}" required>
+              <input type="email" class="form-control mail-input" name="email" placeholder="Email" value="{{old('email')}}" required>
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{old('phone')}}" required>
+              <input type="text" class="form-control mail-input" name="phone" placeholder="Phone" value="{{old('phone')}}" required>
             </div>
 
             <div class="col-md-12">
               <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
             </div>
 
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Úspešne odoslané, ďakujeme.</div>
+            <div class="col-md-12">
+              <input class="form-check-input" type="checkbox" value="" id="CheckAgreement">
+              <label class="form-check-label" for="CheckAgreement">
+                Súhlasím so <a href="{{ route('ochrana-osobnych-udajov') }}" class="link-warning">spracovaním osobných údajov.</a>
+              </label>
+            </div>
 
-              <button type="submit">Odoslať</button>
+            <div class="col-md-12 text-center">
+              <button type="submit" class="btn btn-warning rounded-pill text-light">Odoslať</button>
             </div>
 
           </div>

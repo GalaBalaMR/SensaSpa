@@ -26,6 +26,10 @@ Route::get('/', function () {
     return view('welcome', compact('projects', 'contents'));
 });
 
+Route::get('/ochrana-osobnych-udajov', function(){
+    return view('ochr-os-ud');
+})->name('ochrana-osobnych-udajov');
+
 Route::middleware('isAdmin')->name('admin.')->prefix('admin')->group(function() {
     Route::get('/' , [AdminController::class, 'index'])->name('index');
     Route::resource('/projects' , ProjectController::class);
