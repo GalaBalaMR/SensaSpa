@@ -3,6 +3,7 @@
 use App\Models\Content;
 use App\Models\Project;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\AdminController;
@@ -22,7 +23,12 @@ use App\Http\Controllers\ProjectController;
 
 Route::get('/', function () {
     $projects = Project::all();
-    $contents = Content::all();
+
+    // Cache for content
+    // After updating remove this in boot function in contentcontroller
+    $contents = Cache::rememberForever('contents', function(){
+        return Content::all();
+    });
     return view('welcome', compact('projects', 'contents'));
 });
 

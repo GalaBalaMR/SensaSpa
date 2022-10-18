@@ -40,12 +40,12 @@
                     <div class="d-flex justify-content-end align-items-baseline">
                         @if (Route::has('password.request'))
                             <a class="text-muted me-3" href="{{ route('password.request') }}">
-                                {{ __('Forgot your password?') }}
+                                {{ __('Zabudol si heslo?') }}
                             </a>
                         @endif
 
                         <x-button>
-                            {{ __('Log in') }}
+                            {{ __('Prihlásiť sa') }}
                         </x-button>
                     </div>
                 </div>
