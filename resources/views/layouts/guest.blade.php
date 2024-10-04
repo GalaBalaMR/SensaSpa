@@ -29,7 +29,7 @@
         <link href="{{  asset('theme_vendor/aos/aos.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-        <link href="{{  asset('Trumbowyg/dist/ui/trumbowyg.min.css') }}" rel="stylesheet">
+        <link href="{{  asset('Trumbowyg/dist/trumbowyg.min.css') }}" rel="stylesheet">
         
         {{-- Main CSS --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">

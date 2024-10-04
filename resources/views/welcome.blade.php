@@ -15,7 +15,6 @@
             @include('content.partials.form', ['content' => $contents->where('name', 'about')->first()])
         @endif
       </div>
-
       <div class="col-lg-5" data-aos="fade">
         <form action="{{ route('infomail') }}" method="post" class="p" id="contaktMail">
           @csrf
