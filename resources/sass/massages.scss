@@ -1,0 +1,31 @@
+#massages{
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0px;
+
+        li{
+            text-align: center;
+            margin-bottom: 5vh;
+
+            border-bottom: 2px solid rgb(236, 232, 232);
+            strong{
+                margin-bottom: 2vh;
+                display: block;
+                text-align: center;
+            }
+        }
+
+
+    }
+}

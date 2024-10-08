@@ -85,3 +85,80 @@
 .small {
   font-size: 0.875rem !important;
 }
+
+#about {
+  background-color: #2a3033;
+}
+#about .text-about {
+  color: #fff;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#about .text-about #studio {
+  max-width: 30vw;
+  min-width: 300px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  margin: auto;
+  border-radius: 10px;
+}
+#about .text-about .part {
+  min-height: 80vh;
+  min-width: 100vw;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#about .text-about .part:nth-child(2) {
+  background-color: #9e9d99;
+}
+#about .text-about .part:nth-child(3) {
+  background-color: #dfe9ee;
+  color: #404040;
+}
+#about .text-about h1 {
+  padding-bottom: 5vh;
+  font-size: 7vh;
+}
+#about .text-about h2 {
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+#about .text-about p {
+  padding-bottom: 7vh;
+}
+@media (min-width: 768px) {
+  #about .text-about h1,
+#about .text-about h2,
+#about .text-about p {
+    max-width: 80vw;
+  }
+}
+
+#massages h1 {
+  text-align: center;
+}
+#massages h2 {
+  text-align: center;
+}
+#massages p {
+  text-align: center;
+}
+#massages ul {
+  list-style: none;
+  padding-left: 0px;
+}
+#massages ul li {
+  text-align: center;
+  margin-bottom: 5vh;
+  border-bottom: 2px solid rgb(236, 232, 232);
+}
+#massages ul li strong {
+  margin-bottom: 2vh;
+  display: block;
+  text-align: center;
+}

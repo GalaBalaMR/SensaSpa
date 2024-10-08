@@ -20,8 +20,9 @@
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+        {{-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> --}}
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900|Lato:100,200,300,400,500,600,700,800,900">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900|Lato:100,200,300,400,500,600,700,800,900">
         <!-- Styles -->
         <link href="{{  asset('theme_vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -29,7 +30,7 @@
         <link href="{{  asset('theme_vendor/aos/aos.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
         <link href="{{  asset('theme_vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-        <link href="{{  asset('Trumbowyg/dist/trumbowyg.min.css') }}" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/trumbowyg@2.25.1/dist/ui/trumbowyg.min.css" rel="stylesheet">
         
         {{-- Main CSS --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -46,8 +47,8 @@
 
             <a href="/" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>Woo<span>dD</span>ream</h1>
+                <h1>SensaSpa</h1>
+                <img src="{{ Storage::url('public/img/logo.png') }}" alt="">
             </a>
 
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -138,17 +139,17 @@
 
             <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-            <div class="carousel-item active" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }})">
-                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-1.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            <div class="carousel-item active" style="background-image: url({{ Storage::url('public/img/masaz2.jpg') }})">
+                <img src="{{ Storage::url('public/img/masaz2.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
             </div>
-            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-2.jpg') }})">
-                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-2.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            <div class="carousel-item" style="background-image: url({{ Storage::url('public/img/masaz1.jpg') }})">
+                <img src="{{ Storage::url('public/img/masaz1.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
             </div>
-            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-3.jpg') }})">
-                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-3.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            <div class="carousel-item" style="background-image: url({{ Storage::url('public/img/introfoto.jpg') }})">
+                <img src="{{ Storage::url('public/img/introfoto.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
             </div>
-            <div class="carousel-item" style="background-image: url({{ Storage::url('public/theme_img/hero-carousel/hero-carousel-4.jpg') }})">
-                <img src="{{ Storage::url('public/theme_img/hero-carousel/hero-carousel-4.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
+            <div class="carousel-item" style="background-image: url({{ Storage::url('public/img/masaz3.jpg') }})">
+                <img src="{{ Storage::url('public/img/masaz3.jpg') }}" alt="" style="display: none !important;" width="0" height="0">
             </div>
 
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -295,7 +296,8 @@
         {{-- My JS File --}}
         <script src="{{ asset('js/jquery.js') }}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="{{ asset('Trumbowyg/dist/trumbowyg.min.js') }}" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.25.1/dist/trumbowyg.min.js" defer></script>
+        
         <script src="{{ asset('js/script.js') }}" defer></script>
     </body>
 </html>
