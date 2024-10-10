@@ -8,23 +8,30 @@
                 <div class="row align-items-center flex-column text-about" data-aos="fade-up">
 
                     <div class="part">
-                      
-                      <div class="d-lg-flex justify-content-center">
-                        <div> 
-                            <h1>Vitajte v Sensa Spa</h1>
-                            <h2>Vašej oáze relaxu a zdravia</h2>
-                            <p>V našom masážnom štúdiu Sensa Spa sme sa zamerali na vytvorenie jedinečného priestoru,
-                                kde sa
-                                môžete naplno uvoľniť, obnoviť svoje telo aj myseľ a vychutnať si chvíľku pre seba. Naše
-                                štúdio je navrhnuté tak, aby poskytovalo maximálne pohodlie – od jemného osvetlenia,
-                                ktoré
-                                vytvára príjemnú atmosféru, cez relaxačnú hudbu, až po aromaterapiu s 100% prírodnými
-                                olejmi. S profesionálnym masážnym stolom a vybavením sa u nás budete cítiť ako v
-                                skutočnom
-                                wellness centre.</p>
 
-                          </div>
-                          <img id="studio" src="{{ Storage::url('public/img/studio.jpg') }}" alt="oil image">
+                        <div class="d-lg-flex justify-content-center">
+                            <div>
+                                <h1>Vitajte v Sensa Spa</h1>
+                                <h2>Vašej oáze relaxu a zdravia</h2>
+                                <p>V našom masážnom štúdiu Sensa Spa sme sa zamerali na vytvorenie jedinečného
+                                    priestoru,
+                                    kde sa
+                                    môžete naplno uvoľniť, obnoviť svoje telo aj myseľ a vychutnať si chvíľku pre seba.
+                                </p>
+
+                                <p>
+                                    Naše
+                                    štúdio je navrhnuté tak, aby poskytovalo maximálne pohodlie – od jemného osvetlenia,
+                                    ktoré
+                                    vytvára príjemnú atmosféru, cez relaxačnú hudbu, až po aromaterapiu s 100%
+                                    prírodnými
+                                    olejmi. S profesionálnym masážnym stolom a vybavením sa u nás budete cítiť ako v
+                                    skutočnom
+                                    wellness centre.
+                                </p>
+
+                            </div>
+                            <img id="studio" src="{{ Storage::url('public/img/studio.jpg') }}" alt="oil image">
                         </div>
 
 
@@ -40,7 +47,11 @@
                             Masáž nie je len o relaxe – jej pravidelné absolvovanie má množstvo pozitívnych účinkov
                             na
                             zdravie. Zlepšuje krvný obeh, podporuje regeneráciu svalov, uvoľňuje napätie, zmierňuje
-                            stres a zlepšuje kvalitu spánku. Pre tých, ktorí trpia bolesťami chrbta, stuhnutosťou
+                            stres a zlepšuje kvalitu spánku.
+                        </p>
+
+                        <p>
+                            Pre tých, ktorí trpia bolesťami chrbta, stuhnutosťou
                             svalov
                             či chronickým napätím, masáž môže výrazne zlepšiť kvalitu života.
                         </p>
@@ -53,7 +64,11 @@
                         <p>V Sensa Spa vám ponúkame širokú škálu masáží, ktoré sú prispôsobené vašim individuálnym
                             potrebám. Či už hľadáte klasickú relaxačnú masáž, športovú masáž na uvoľnenie svalov po
                             fyzickej námahe, alebo špeciálne terapie ako manuálnu lymfodrenáž či myofasciálnu masáž – u
-                            nás nájdete to, čo hľadáte. V našich procedúrach používame 100% prírodné esenciálne oleje,
+                            nás nájdete to, čo hľadáte. 
+                        </p>
+
+                        <p>
+                            V našich procedúrach používame 100% prírodné esenciálne oleje,
                             ktoré zlepšujú relaxáciu a podporujú liečivé účinky masáže.
                         </p>
 
