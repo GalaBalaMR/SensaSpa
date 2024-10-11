@@ -88,6 +88,7 @@
 
 #about {
   background-color: #2a3033;
+  color: #fff;
 }
 #about .text-about {
   color: #fff;
@@ -137,6 +138,19 @@
 #about .text-about p {
     max-width: 80vw;
   }
+}
+#about .buttons {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+#about .buttons a {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 2vh;
+  color: rgb(245, 243, 243);
+  border: 2px solid rgb(245, 134, 6);
+  padding: 10px 15px;
 }
 
 #massages h1 {

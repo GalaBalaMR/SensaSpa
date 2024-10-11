@@ -64,7 +64,7 @@
                         <p>V Sensa Spa vám ponúkame širokú škálu masáží, ktoré sú prispôsobené vašim individuálnym
                             potrebám. Či už hľadáte klasickú relaxačnú masáž, športovú masáž na uvoľnenie svalov po
                             fyzickej námahe, alebo špeciálne terapie ako manuálnu lymfodrenáž či myofasciálnu masáž – u
-                            nás nájdete to, čo hľadáte. 
+                            nás nájdete to, čo hľadáte.
                         </p>
 
                         <p>
@@ -81,20 +81,28 @@
 
                         </ul> --}}
 
-                    @if (Auth::check() && Auth::user()->is_admin)
+                    {{-- @if (Auth::check() && Auth::user()->is_admin)
                         @include('content.partials.form', [
                             'content' => $contents->where('name', 'massages')->first(),
                         ])
-                    @endif
+                    @endif --}}
                 </div>
-                <div class="" data-aos="fade">
-                    <form action="{{ route('infomail') }}" method="post" class="p" id="contaktMail">
+                <div class="text-center" data-aos="fade">
+                    <h3>Napíšte nám!</h3>
+                    <p>V prípade akýchkoľvek otázok nás neváhajte kontaktovať. Môžte nám napísat na <a
+                            href="mailto:kontakt@sensaspa.sk">kontakt@sensaspa.sk</a>, alebo cez <a
+                            href="tel:+421910152552">tel. číslo 0910 152 552</a>.
+                    </p>
+
+                    <div class="buttons ">
+                        <a data-aos="fade-up" data-aos-delay="200" href="mailto:kontakt@sensaspa.sk"
+                            class="d-block btn rounded-pill btn-outline-warning">Napísať mail</a>
+                        <a data-aos="fade-up" data-aos-delay="200" href="tel:+421910152552"
+                            class="d-block btn rounded-pill btn-outline-warning">Zavolať</a>
+                    </div>
+                    {{-- <form action="{{ route('infomail') }}" method="post" class="p" id="contaktMail">
                         @csrf
                         @method('post')
-                        <h3>Napíšte nám!</h3>
-                        <p>V prípade akýchkoľvek otázok nás neváhajte kontaktovať. Môžte nám napísat na <a
-                                href="mailto:info@wooddream.sk">info@wooddream.sk</a>, alebo cez náš kontaktný formulár.
-                        </p>
                         <div class="row gy-3">
 
                             <div class="col-md-12">
@@ -129,15 +137,19 @@
                             </div>
 
                         </div>
-                    </form>
+                    </form> --}}
                 </div><!-- End Quote Form -->
 
             </div>
 
+
         </div>
 
+
+
+
         <!-- ======= Services Section ======= -->
-        <div id="services" class="services section-bg">
+        {{-- <div id="services" class="services section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
@@ -231,9 +243,15 @@
                 </div>
 
             </div>
-        </div><!-- End Services Section -->
+        </div><!-- End Services Section --> --}}
 
     </section><!-- End Get Started Section -->
+
+    <section id="bookio">
+        <script type="text/javascript" src="https://bookio-services-eu.s3.eu-central-1.amazonaws.com/assets/widget.bookio.js">
+        </script> <iframe id="bookio-iframe" src="https://services.bookio.com/sensa-spa/widget?lang=sk"
+            width="100%" height="100%" onload="initBookioWidget()" scrolling="no"></iframe>
+    </section>
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features section-bg">
@@ -243,18 +261,18 @@
 
                 <li class="nav-item col-4">
                     <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                        <h4>Kuchyne</h4>
+                        <h4>Prírodné oleje</h4>
                     </a>
                 </li><!-- End tab nav item -->
 
                 <li class="nav-item col-4">
                     <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                        <h4>Vstavané skrine</h4>
+                        <h4>Fasciálne nože</h4>
                     </a><!-- End tab nav item -->
 
                 <li class="nav-item col-4">
                     <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                        <h4>Nábytky</h4>
+                        <h4>Masážne banky</h4>
                     </a>
                 </li><!-- End tab nav item -->
 
@@ -266,55 +284,74 @@
                     <div class="row">
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
                             data-aos="fade-up" data-aos-delay="100">
-                            {!! $contents->where('name', 'feature_kitchen')->first()->content !!}
+                            <h3>100% prírodné oleje</h3>
+                            <p class="fst-italic">
+                                Esenciálne oleje sú koncentrované výťažky z rastlín, ktoré majú silné terapeutické
+                                vlastnosti. Využívajú sa pri masážach na podporu relaxácie, zlepšenie nálady a
+                                posilnenie zdravotných benefitov masáže. Každý olej má jedinečné vlastnosti, ktoré môžu
+                                pôsobiť na telo aj myseľ.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check2-all"></i> Uvoľňujú napätie a stres</li>
+                                <li><i class="bi bi-check2-all"></i> Zlepšujú kvalitu spánku</li>
+                                <li><i class="bi bi-check2-all"></i> Podporujú imunitný systém</li>
+                                <li><i class="bi bi-check2-all"></i> Zlepšujú náladu a koncentráciu</li>
+                                <li><i class="bi bi-check2-all"></i> Majú protizápalové a analgetické účinky</li>
+                            </ul>
 
-                            @if (Auth::check() && Auth::user()->is_admin)
-                                @include('content.partials.form', [
-                                    'content' => $contents->where('name', 'feature_kitchen')->first(),
-                                ])
-                            @endif
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                            <img src="{{ Storage::url('public/theme_img/features-1.jpg') }}" alt=""
-                                class="img-fluid">
+                            <img src="{{ Storage::url('public/img/oils.jpg') }}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div><!-- End tab content item -->
-
-                <div class="tab-pane" id="tab-2">
+                <div class="tab-pane show" id="tab-2">
                     <div class="row">
-                        <div
-                            class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                            {!! $contents->where('name', 'feature_wardrobe')->first()->content !!}
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <h3>Fasciálne nože</h3>
+                            <p class="fst-italic">
+                                Myofasciálne nože sú špeciálne nástroje používané na uvoľnenie napätia vo fasciálnych
+                                tkanivách, ktoré obklopujú svaly. Pomáhajú zmierniť bolesť, zlepšiť flexibilitu a
+                                podporiť regeneráciu svalov. Ich pravidelné používanie zlepšuje krvný obeh a pomáha
+                                odstraňovať svalové uzly a napätie.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check2-all"></i> Uvoľňujú napätie vo fasciálnych tkanivách</li>
+                                <li><i class="bi bi-check2-all"></i> Zlepšujú pohyblivosť a flexibilitu</li>
+                                <li><i class="bi bi-check2-all"></i> Znižujú bolesť a podporujú regeneráciu svalov</li>
+                                <li><i class="bi bi-check2-all"></i> Zlepšujú krvný obeh v postihnutých oblastiach</li>
+                                <li><i class="bi bi-check2-all"></i> Pomáhajú rozbíjať svalové uzly</li>
+                            </ul>
 
-                            @if (Auth::check() && Auth::user()->is_admin)
-                                @include('content.partials.form', [
-                                    'content' => $contents->where('name', 'feature_wardrobe')->first(),
-                                ])
-                            @endif
+
                         </div>
-                        <div class="col-lg-6 order-1 order-lg-2 text-center">
-                            <img src="{{ Storage::url('public/theme_img/features-2.jpg') }}" alt=""
-                                class="img-fluid">
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="{{ Storage::url('public/img/noze.webp') }}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div><!-- End tab content item -->
-
-                <div class="tab-pane" id="tab-3">
+                <div class="tab-pane show" id="tab-3">
                     <div class="row">
-                        <div
-                            class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                            {!! $contents->where('name', 'feature_furniture')->first()->content !!}
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <h3>Masážne banky</h3>
+                            <p class="fst-italic">
+                                Masážne banky sa využívajú na vytvorenie podtlaku na koži, ktorý stimuluje krvný obeh a
+                                podporuje regeneráciu tkanív. Tieto banky pomáhajú uvoľniť napätie, zmierniť bolesť a
+                                detoxikovať telo. Používanie bánk zvyšuje prísun živín do svalov a urýchľuje hojenie.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check2-all"></i> Zlepšujú krvný obeh a regeneráciu tkanív</li>
+                                <li><i class="bi bi-check2-all"></i> Uvoľňujú svalové napätie a zmierňujú bolesť</li>
+                                <li><i class="bi bi-check2-all"></i> Podporujú detoxikáciu organizmu</li>
+                                <li><i class="bi bi-check2-all"></i> Zlepšujú prísun živín do svalov</li>
+                                <li><i class="bi bi-check2-all"></i> Urýchľujú hojenie a regeneráciu</li>
+                            </ul>
 
-                            @if (Auth::check() && Auth::user()->is_admin)
-                                @include('content.partials.form', [
-                                    'content' => $contents->where('name', 'feature_furniture')->first(),
-                                ])
-                            @endif
                         </div>
-                        <div class="col-lg-6 order-1 order-lg-2 text-center">
-                            <img src="{{ Storage::url('public/theme_img/features-3.jpg') }}" alt=""
-                                class="img-fluid">
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="{{ Storage::url('public/img/cups.jpg') }}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div><!-- End tab content item -->
@@ -329,8 +366,8 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-header">
-                <h2>Ako pracujem</h2>
-                <p>Som najlepší remeselník</p>
+                <h2>Masáže</h2>
+                <p>Typy masáží, ktoré poskytujeme</p>
             </div>
 
             <div class="row gy-4">
@@ -340,48 +377,143 @@
                         <div class="row">
                             <div class="col-xl-5">
                                 <div class="card-bg"
-                                    style="background-image: url({{ Storage::url('public/theme_img/constructions-1.jpg') }});">
+                                    style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
                                 <div class="card-body">
-                                    {!! $contents->where('name', 'construction_first')->first()->content !!}
-
-                                    @if (Auth::check() && Auth::user()->is_admin)
-                                        @include('content.partials.form', [
-                                            'content' => $contents->where('name', 'construction_first')->first(),
-                                        ])
-                                    @endif
+                                    <h4 class="card-title">Klasická masáž</h4>
+                                    <p>
+                                        Klasická masáž je ideálna pre relaxáciu a uvoľnenie svalového napätia. Zlepšuje
+                                        krvný obeh,
+                                        urýchľuje regeneráciu tkanív a prispieva k celkovému uvoľneniu tela a mysle.
+                                        Táto forma
+                                        masáže pomáha zmierniť bolesti chrbta, šije a kĺbov, pričom podporuje dlhodobé
+                                        zdravie
+                                        pohybového aparátu.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div><!-- End Card Item -->
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
                                 <div class="card-bg"
-                                    style="background-image: url({{ Storage::url('public/theme_img/constructions-2.jpg') }});">
+                                    style="background-image: url({{ Storage::url('public/img/cups.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
                                 <div class="card-body">
-                                    {!! $contents->where('name', 'construction_second')->first()->content !!}
-
-                                    @if (Auth::check() && Auth::user()->is_admin)
-                                        @include('content.partials.form', [
-                                            'content' => $contents->where('name', 'construction_second')->first(),
-                                        ])
-                                    @endif
+                                    <h4 class="card-title">Kombinovaná masáž</h4>
+                                    <p>
+                                        Kombinovaná masáž je prispôsobená presne podľa individuálnych potrieb každého
+                                        klienta. Spája techniky
+                                        klasickej, športovej,bankovania, myofasciálnej a triggerpoint masáže na
+                                        uvoľnenie svalov, zmiernenie bolesti a
+                                        zlepšenie pohyblivosti. Cieľom je dosiahnuť optimálne výsledky, pričom sa
+                                        zameriavame na konkrétne
+                                        problémové oblasti, aby sme dosiahli čo najväčší úžitok pre vaše telo a celkovú
+                                        pohodu.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div><!-- End Card Item -->
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-xl-5">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Myofasciálna masáž</h4>
+                                    <p>
+                                        Myofasciálna masáž sa zameriava na uvoľnenie napätia vo fasciálnych tkanivách, ktoré obklopujú svaly a kosti.
+                                        Táto technika pomáha zlepšiť flexibilitu, zmierniť bolesť a zlepšiť krvný obeh. Ideálna pre ľudí, ktorí
+                                        trpia chronickým napätím a potrebujú hlbšie uvoľnenie tkanív.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Card Item -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-xl-5">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Bankovanie</h4>
+                                    <p>
+                                        Bankovanie je starodávna technika, ktorá pomocou podtlaku stimuluje krvný obeh a podporuje detoxikáciu tela.
+                                        Pomáha uvoľniť napäté svaly, zlepšiť pohyblivosť a odstrániť toxíny z tela. Je výbornou metódou na
+                                        zmiernenie bolesti a urýchlenie regenerácie.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Card Item -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-xl-5">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Breussova masáž</h4>
+                                    <p>
+                                        Breussova masáž je jemná energetická masáž, zameraná na podporu zdravia chrbtice a regeneráciu
+                                        medzistavcových platničiek. Pomocou špeciálnych ťahov a jemných dotykov uvoľňuje tlak na chrbticu a
+                                        pomáha obnoviť rovnováhu tela. Ideálna pre klientov so bolesťami chrbta.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Card Item -->
+                
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-xl-5">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Manuálna lymfodrenáž</h4>
+                                    <p>
+                                        Manuálna lymfodrenáž je špeciálna masážna technika, ktorá stimuluje lymfatický systém a podporuje
+                                        odplavovanie toxínov z tela. Pomáha zmierniť opuchy, zlepšiť imunitu a detoxikovať organizmus.
+                                        Ideálna pre klientov, ktorí chcú podporiť svoje zdravie a zlepšiť regeneráciu tela.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Card Item -->
+                
+                
+
+                {{-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
@@ -402,38 +534,17 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- End Card Item -->
-
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card-item">
-                        <div class="row">
-                            <div class="col-xl-5">
-                                <div class="card-bg"
-                                    style="background-image: url({{ Storage::url('public/theme_img/constructions-4.jpg') }});">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 d-flex align-items-center">
-                                <div class="card-body">
-                                    {!! $contents->where('name', 'construction_four')->first()->content !!}
-
-                                    @if (Auth::check() && Auth::user()->is_admin)
-                                        @include('content.partials.form', [
-                                            'content' => $contents->where('name', 'construction_four')->first(),
-                                        ])
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Card Item -->
+                </div><!-- End Card Item --> --}}
 
             </div>
 
         </div>
     </section><!-- End Constructions Section -->
 
+    
+
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    {{-- <section id="projects" class="projects">
         <div class="container" data-aos="fade-up">
 
             <div class="section-header pb-3">
@@ -464,7 +575,7 @@
                     <li data-filter=".filter-kuchyňa">Kuchyne</li>
                     <li data-filter=".filter-nábytok">Nábytky</li>
                     <li data-filter=".filter-ostatné">Ostatné</li>
-                </ul><!-- End Projects Filters -->
+                </ul>
 
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
@@ -483,7 +594,7 @@
                                                         class="d-block w-100  rounded-top" alt="...">
                                                     <div class="carousel-caption d-none d-md-block">
 
-                                                        {{-- on click showing gallery --}}
+                                                       
                                                         <a href="{{ Storage::url($image) }}"
                                                             title="{{ $project->name }}"
                                                             data-gallery="portfolio-gallery-{{ $project->kind }}"
@@ -499,7 +610,7 @@
                                                     class="d-block w-100  rounded-top" alt="...">
                                                 <div class="carousel-caption d-none d-md-block">
 
-                                                    {{-- on click showing gallery --}}
+                                                    
                                                     <a href="{{ Storage::url($image) }}"
                                                         title="{{ $project->name }}"
                                                         data-gallery="portfolio-gallery-{{ $project->kind }}"
@@ -532,7 +643,7 @@
                                     <hr>
                                     {{ $project->description }}
 
-                                    {{-- Item for update and delete --}}
+                                
                                     @if (Auth::check() && Auth::user()->is_admin)
                                         <div class="d-flex justify-content-between align-items-center">
 
@@ -555,121 +666,14 @@
                     @empty
                     @endforelse
 
-                </div><!-- End Projects Container -->
+                </div>
 
             </div>
 
         </div>
-    </section><!-- End Our Projects Section -->
+    </section> --}}<!-- End Our Projects Section -->
 
-    {{-- <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
-          <div class="container" data-aos="fade-up">
-    
-            <div class="section-header">
-              <h2>Testimonials</h2>
-              <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
-            </div>
-    
-            <div class="slides-2 swiper">
-              <div class="swiper-wrapper">
-    
-                <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                      <h3>Saul Goodman</h3>
-                      <h4>Ceo &amp; Founder</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-    
-                <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                      <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                      <h3>Sara Wilsson</h3>
-                      <h4>Designer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-    
-                <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                      <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                      <h3>Jena Karlis</h3>
-                      <h4>Store Owner</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-    
-                <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                      <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                      <h3>Matt Brandon</h3>
-                      <h4>Freelancer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-    
-                <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                      <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                      <h3>John Larson</h3>
-                      <h4>Entrepreneur</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-    
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-    
-          </div>
-        </section><!-- End Testimonials Section --> --}}
+
 
 
 </x-guest-layout>

@@ -131,7 +131,7 @@
                     @If(Auth::check() && Auth::user()->is_admin)
                         @include('content.partials.form', ['content' => $contents->where('name', 'hero')->first()])
                     @endif
-                    <a data-aos="fade-up" data-aos-delay="200" href="#contaktMail" class="btn-get-started">Kontaktuj nás</a>
+                    <a data-aos="fade-up" data-aos-delay="200" href="#bookio" class="btn-get-started">Objednať sa</a>
                 </div>
                 </div>
             </div>

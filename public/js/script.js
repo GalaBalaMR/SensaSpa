@@ -60,7 +60,7 @@ $( document ).ready(function() {
       $alert_p = $('<p></p>');
       $loader  = $('#loader');
 
-  $alert_p.appendTo($alert);
+  $alert_p.appendTo($alert); 
 
   ajaxMailForm.on('submit', function(e){
     e.preventDefault();
