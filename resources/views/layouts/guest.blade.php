@@ -27,6 +27,7 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900|Lato:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900|Lato:100,200,300,400,500,600,700,800,900">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('theme_vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('theme_vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -52,7 +53,7 @@
 
             <a href="/" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <h1>SensaSpa</h1>
+                <h1>Sensa Spa</h1>
                 <img src="{{ Storage::url('public/img/logo.png') }}" alt="">
             </a>
 
@@ -134,13 +135,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
-                        {!! $contents->first()->content !!}
-
-                        @if (Auth::check() && Auth::user()->is_admin)
-                            @include('content.partials.form', [
-                                'content' => $contents->where('name', 'hero')->first(),
-                            ])
-                        @endif
+                        <h1 class="sensafont">Sensa Spa</h1>
+                        <p>Vstúpte do sveta relaxu a zdravia, kde sa vaše telo a myseľ stanú jedným.</p>
                         <a data-aos="fade-up" data-aos-delay="200" href="#bookio" class="btn-get-started">Objednať
                             sa</a>
                     </div>

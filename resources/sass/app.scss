@@ -1,8 +1,8 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
@@ -12,3 +12,9 @@
 @import "about";
 @import "cennik";
 @import "massages";
+
+.sensafont {
+    font-family: "IM Fell English", serif;
+    font-weight: 700;
+    font-style: normal;
+}

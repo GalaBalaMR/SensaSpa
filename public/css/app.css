@@ -178,7 +178,7 @@
 }
 #cennik .zigzag {
   border-collapse: separate;
-  border-spacing: 0.25em 1em;
+  border-spacing: 0.25em 1.5em;
 }
 #cennik .zigzag tbody tr:nth-child(odd) {
   transform: rotate(2deg);
@@ -210,4 +210,10 @@
   margin-bottom: 2vh;
   display: block;
   text-align: center;
+}
+
+.sensafont {
+  font-family: "IM Fell English", serif;
+  font-weight: 700;
+  font-style: normal;
 }

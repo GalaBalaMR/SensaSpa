@@ -26,7 +26,7 @@
       
       .zigzag {
         border-collapse:separate;
-        border-spacing:.25em 1.em;
+        border-spacing:.25em 1.5em;
         tbody tr:nth-child(odd) {
           transform:rotate(2deg);
         }
