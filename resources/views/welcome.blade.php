@@ -253,6 +253,67 @@
             width="100%" height="100%" onload="initBookioWidget()" scrolling="no"></iframe>
     </section>
 
+    <section id="cennik">
+        <table class="zigzag">
+            <thead>
+              <tr>
+                <th>Meno masáže</th>
+                <th>Čas trvania</th>
+                <th>Cena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Klasická masáž</td>
+                <td>25 min</td>
+                <td>12 €</td>
+              </tr>
+              <tr>
+              <tr>
+                <td>Klasická masáž</td>
+                <td>50 min</td>
+                <td>20 €</td>
+              </tr>
+              <tr>
+                <td>Kombinovaná masáž</td>
+                <td>25 min</td>
+                <td>12 €</td>
+              </tr>
+              <tr>
+              <tr>
+                <td>Kombinovaná masáž</td>
+                <td>50 min</td>
+                <td>20 €</td>
+              </tr>
+                <td>Myofasciálna masáž</td>
+                <td>50 min</td>
+                <td>25 €</td>
+              </tr>
+              <tr>
+                <td>Bankovanie</td>
+                <td>50 min</td>
+                <td>20 €</td>
+              </tr>
+              <tr>
+                <td>Breussova masáž</td>
+                <td>25 min</td>
+                <td>20 €</td>
+              </tr>
+              <tr>
+                <td>Sensa Touch</td>
+                <td>25 min</td>
+                <td>15 €</td>
+              </tr>
+              <tr>
+                <td>Manuálna lymfodrenáž</td>
+                <td>120 min</td>
+                <td>60 €</td>
+              </tr>
+            </tbody>
+          </table>
+          
+    </section>
+
     <!-- ======= Features Section ======= -->
     <section id="features" class="features section-bg">
         <div class="container" data-aos="fade-up">
@@ -377,7 +438,7 @@
                         <div class="row">
                             <div class="col-xl-5">
                                 <div class="card-bg"
-                                    style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                    style="background-image: url({{ Storage::url('public/img/masaz1.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
@@ -404,7 +465,7 @@
                         <div class="row">
                             <div class="col-xl-5">
                                 <div class="card-bg"
-                                    style="background-image: url({{ Storage::url('public/img/cups.jpg') }});">
+                                    style="background-image: url({{ Storage::url('public/img/masaz2.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
@@ -415,10 +476,7 @@
                                         klienta. Spája techniky
                                         klasickej, športovej,bankovania, myofasciálnej a triggerpoint masáže na
                                         uvoľnenie svalov, zmiernenie bolesti a
-                                        zlepšenie pohyblivosti. Cieľom je dosiahnuť optimálne výsledky, pričom sa
-                                        zameriavame na konkrétne
-                                        problémové oblasti, aby sme dosiahli čo najväčší úžitok pre vaše telo a celkovú
-                                        pohodu.
+                                        zlepšenie pohyblivosti.
                                     </p>
                                 </div>
                             </div>
@@ -431,7 +489,7 @@
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
-                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/iastm.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
@@ -452,7 +510,7 @@
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
-                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/cups.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
@@ -473,7 +531,7 @@
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
-                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/breus.jpg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">
@@ -494,7 +552,7 @@
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
-                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/oils.jpg') }});">
+                                <div class="card-bg" style="background-image: url({{ Storage::url('public/img/lymfa1.jpeg') }});">
                                 </div>
                             </div>
                             <div class="col-xl-7 d-flex align-items-center">

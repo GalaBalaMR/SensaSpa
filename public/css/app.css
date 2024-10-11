@@ -153,6 +153,41 @@
   padding: 10px 15px;
 }
 
+#cennik h1 {
+  color: #c00;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+#cennik table {
+  font-family: sans-serif;
+}
+#cennik table th, #cennik table td {
+  padding: 0.25em 0.5em;
+  text-align: left;
+}
+#cennik table th:nth-child(2), #cennik table td:nth-child(2) {
+  text-align: right;
+}
+#cennik table td {
+  background-color: #eee;
+}
+#cennik table th {
+  background-color: #feb900;
+  color: #fff;
+}
+#cennik .zigzag {
+  border-collapse: separate;
+  border-spacing: 0.25em 1em;
+}
+#cennik .zigzag tbody tr:nth-child(odd) {
+  transform: rotate(2deg);
+}
+#cennik .zigzag thead tr,
+#cennik .zigzag tbody tr:nth-child(even) {
+  transform: rotate(-2deg);
+}
+
 #massages h1 {
   text-align: center;
 }
